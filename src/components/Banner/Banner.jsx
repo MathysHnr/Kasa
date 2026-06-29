@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types'
 import './Banner.scss'
 
-function Banner({ image, alt, children }) {
+function Banner({ image, alt = '', children = null }) {
     return (
         <section className="banner">
             <img className="banner__image" src={image} alt={alt} />
@@ -14,11 +14,6 @@ Banner.propTypes = {
     image: PropTypes.string.isRequired,
     alt: PropTypes.string,
     children: PropTypes.node,
-}
-
-Banner.defaultProps = {
-    alt: '',
-    children: null,
 }
 
 export default Banner
