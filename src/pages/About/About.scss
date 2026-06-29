@@ -1,0 +1,17 @@
+@use '../../styles/mixins' as *;
+
+.about {
+    &__sections {
+        max-width: 1023px;
+        margin: 0 auto;
+        padding-top: 50px;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+
+        @include mobile {
+            padding-top: 22px;
+            gap: 20px;
+        }
+    }
+}
