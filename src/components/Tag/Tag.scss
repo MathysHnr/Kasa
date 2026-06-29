@@ -1,0 +1,23 @@
+@use '../../styles/variables' as *;
+@use '../../styles/mixins' as *;
+
+.tag {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 25px;
+    min-width: 115px;
+    padding: 0 20px;
+    background-color: $primary;
+    color: $white;
+    font-size: 14px;
+    font-weight: 500;
+    border-radius: 10px;
+
+    @include mobile {
+        height: 18px;
+        min-width: 84px;
+        padding: 0 14px;
+        font-size: 10px;
+    }
+}

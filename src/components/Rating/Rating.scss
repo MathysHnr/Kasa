@@ -1,0 +1,15 @@
+@use '../../styles/mixins' as *;
+
+.rating {
+    display: flex;
+    gap: 10px;
+
+    &__star {
+        width: 36px;
+        height: auto;
+
+        @include mobile {
+            width: 18px;
+        }
+    }
+}
