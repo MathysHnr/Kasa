@@ -1,0 +1,50 @@
+@use '../../styles/mixins' as *;
+@use '../../styles/variables' as *;
+
+.header {
+    @include container;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+    &__logo img {
+        height: 68px;
+        width: auto;
+
+        @include mobile {
+            height: 35px;
+        }
+    }
+
+    &__nav {
+        display: flex;
+        align-items: center;
+        gap: 60px;
+
+        @include mobile {
+            gap: 20px;
+        }
+    }
+
+    &__link {
+        font-size: 24px;
+        font-weight: 500;
+        color: $primary;
+        text-transform: capitalize;
+
+        &.active {
+            text-decoration: underline;
+        }
+
+        @include mobile {
+            font-size: 12px;
+            text-transform: uppercase;
+
+            &.active {
+                text-decoration: none;
+            }
+        }
+    }
+}

@@ -1,0 +1,13 @@
+@use '../../styles/mixins' as *;
+
+.main {
+    flex: 1;
+    @include container;
+    padding-top: 40px;
+    padding-bottom: 40px;
+
+    @include mobile {
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+}

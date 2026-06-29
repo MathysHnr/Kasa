@@ -1,0 +1,32 @@
+@use '../../styles/variables' as *;
+@use '../../styles/mixins' as *;
+
+.footer {
+    margin-top: 40px;
+    padding: 60px 20px;
+    background-color: $black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+
+    &__logo {
+        height: 50px;
+        width: auto;
+
+        @include mobile {
+            height: 30px;
+        }
+    }
+
+    &__text {
+        color: $white;
+        font-size: 24px;
+        text-align: center;
+
+        @include mobile {
+            font-size: 12px;
+            max-width: 130px;
+        }
+    }
+}
