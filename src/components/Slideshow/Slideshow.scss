@@ -1,0 +1,70 @@
+@use '../../styles/variables' as *;
+@use '../../styles/mixins' as *;
+
+.slideshow {
+    position: relative;
+    width: 100%;
+    height: 415px;
+    border-radius: 25px;
+    overflow: hidden;
+
+    @include mobile {
+        height: 255px;
+        border-radius: 10px;
+    }
+
+    &__image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    &__arrow {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background: none;
+        border: none;
+        cursor: pointer;
+        padding: 0;
+
+        img {
+            width: 80px;
+            height: auto;
+
+            @include mobile {
+                width: 25px;
+            }
+        }
+
+        &--left {
+            left: 25px;
+
+            @include mobile {
+                left: 12px;
+            }
+        }
+
+        &--right {
+            right: 25px;
+
+            @include mobile {
+                right: 12px;
+            }
+        }
+    }
+
+    &__counter {
+        position: absolute;
+        bottom: 25px;
+        left: 50%;
+        transform: translateX(-50%);
+        color: $white;
+        font-size: 18px;
+        font-weight: 500;
+
+        @include mobile {
+            display: none;
+        }
+    }
+}
