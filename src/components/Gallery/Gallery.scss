@@ -1,0 +1,26 @@
+@use '../../styles/variables' as *;
+@use '../../styles/mixins' as *;
+
+.gallery {
+    margin-top: 40px;
+    padding: 56px;
+    background-color: $light-grey;
+    border-radius: 25px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 50px;
+
+    @include tablet {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 40px;
+    }
+
+    @include mobile {
+        margin-top: 22px;
+        padding: 0;
+        background-color: transparent;
+        border-radius: 0;
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+}
