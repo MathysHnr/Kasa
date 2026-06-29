@@ -1,0 +1,23 @@
+@use 'variables' as *;
+
+// Centre le contenu et limite sa largeur
+@mixin container {
+    width: 100%;
+    max-width: $max-width;
+    margin: 0 auto;
+    padding: 0 $page-padding;
+}
+
+// Raccourci pour les media queries mobiles
+@mixin mobile {
+    @media screen and (max-width: $breakpoint-mobile) {
+        @content;
+    }
+}
+
+// Raccourci pour les media queries tablettes
+@mixin tablet {
+    @media screen and (max-width: $breakpoint-tablet) {
+        @content;
+    }
+}
