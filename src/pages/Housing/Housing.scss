@@ -1,0 +1,80 @@
+@use '../../styles/variables' as *;
+@use '../../styles/mixins' as *;
+
+.housing {
+    &__header {
+        margin-top: 30px;
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        gap: 20px;
+
+        @include mobile {
+            margin-top: 18px;
+            flex-direction: column;
+            gap: 16px;
+        }
+    }
+
+    &__title {
+        color: $primary;
+        font-size: 36px;
+        font-weight: 500;
+
+        @include mobile {
+            font-size: 18px;
+        }
+    }
+
+    &__location {
+        margin-top: 5px;
+        color: $primary;
+        font-size: 18px;
+        font-weight: 400;
+
+        @include mobile {
+            font-size: 14px;
+        }
+    }
+
+    &__tags {
+        margin-top: 15px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    &__aside {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 25px;
+
+        @include mobile {
+            width: 100%;
+            flex-direction: row-reverse;
+            align-items: center;
+            justify-content: space-between;
+            gap: 0;
+        }
+    }
+
+    &__details {
+        margin-top: 30px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 76px;
+
+        @include mobile {
+            margin-top: 20px;
+            grid-template-columns: 1fr;
+            gap: 20px;
+        }
+    }
+
+    &__equipments {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+    }
+}
